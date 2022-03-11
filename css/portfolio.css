@@ -1,0 +1,374 @@
+@charset "utf-8";
+/*----------------------　ポートフォリオ(共通)　----------------------*/
+html, body {
+	font-family: 'メイリオ', 'Hiragino Kaku Gothic Pro', sans-serif;
+	background-color: white;
+}
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 16%;
+	height: 100%;
+	background: linear-gradient(to left, royalblue, lightblue);
+	color: #fff;
+	box-shadow: 2px 0 3px rgba(0,0,0,.2);
+	padding-left: 3%;
+}
+.title {
+	padding-top: 20%;
+	padding-bottom: 25%;
+	vertical-align: middle;
+	text-align: center;
+	font-size: 22px;
+}
+header ul li {
+	padding-bottom: 14%;
+	color: #fff;
+	font-weight: bold;
+}
+.pagebox {
+	width: 75%;
+	height: auto;
+	margin-left: 24%;
+	padding-top: 5%;
+}
+.pagebox h2 {
+	font-size: 25px;
+	margin-bottom: 3%;
+	color: mediumblue;
+}
+
+/* ######################### 820px以上～1250px以下 ######################### */
+@media (min-width: 820px) and (max-width: 1250px) {
+	
+}
+/* ######################### 520px以上～819px以下（スマートフォン横）######################### */
+@media (min-width: 520px) and (max-width: 819px) {
+	header {
+		width: 20%;
+		padding-left: 3%;
+	}
+	.title {
+		padding-top: 15%;
+		padding-bottom: 15%;
+		font-weight: bold;
+		font-size: 15px;
+	}
+	header ul li {
+		padding-bottom: 8%;
+		font-weight: normal;
+		font-size: 13px;
+		letter-spacing: 2.5px;
+	}
+	.pagebox {
+		width: 60%;
+		height: auto;
+		margin-left: 30%;
+		padding-top: 5%;
+	}
+	.pagebox h2 {
+		font-size: 20px;
+	}
+	#width_type {
+		font-size: 13px;
+		letter-spacing: 2.5px;
+	}
+}
+/* ######################### 519px以下（スマートフォン縦）######################### */
+@media (max-width: 519px) {
+	header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 13%;
+		padding-left: 3%;
+	}
+	.title {
+		padding-top: 2%;
+		padding-bottom: 2%;
+		font-size: 17px;
+		font-weight: bold;
+	}
+	#works {
+		margin-top: 80px;
+	}
+	header #media1 ul li {
+		display: inline-block;
+		padding: 0;
+		padding-right: 2%;
+		font-size: 11px;
+		letter-spacing: 2.5px;
+	}
+	.pagebox {
+		width: 75%;
+		height: auto;
+		margin-left: 10%;
+		padding-top: 5%;
+	}
+	.pagebox h2 {
+		font-size: 17px;
+	}
+	#width_type2 {
+		font-size: 11px;
+		letter-spacing: 2.5px;
+	}
+}
+/*----------------------　works　----------------------*/
+#works .works-left {
+	width: 70%;
+	padding-right: 0;
+}
+#works .works-right {
+	width: 70%;
+	padding-right: 0;
+}
+#works img {
+	width: 100%;
+	height: 100%;
+	transition: all .3s;
+}
+#works table tr th {
+	padding-top: 2%;
+	padding-bottom: 2%;
+	padding-right: 2%;
+}
+#works table tr td {
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+/* ######################### 820px以上～1250px以下 ######################### */
+@media (min-width: 820px) and (max-width: 1250px) {
+	#works .works-left {
+		display: block;
+		width: 90%;
+	}
+	#works .works-right {
+		display: block;
+		width: 90%;
+		font-size: 17px;
+	}
+}
+/* ######################### 520px以上～819px以下（スマートフォン横）######################### */
+@media (min-width: 520px) and (max-width: 819px) {
+	#works .works-left {
+		display: block;
+		width: 80%;
+	}
+	#works .works-right {
+		display: block;
+		width: 80%;
+		font-size: 13px;
+	}
+}
+/* ######################### 519px以下（スマートフォン縦）######################### */
+@media (max-width: 519px) {
+	#works .works-left {
+		display: block;
+		width: 95%;
+	}
+	#works .works-right {
+		display: block;
+		width: 95%;
+		font-size: 14px;
+	}
+}
+/*----------------------　MySoft　----------------------*/
+#mysoft ul li {
+	padding: 20px;
+	padding-left: 100px;
+}
+/* ######################### 820px以上～1250px以下 ######################### */
+@media (min-width: 820px) and (max-width: 1250px) {
+	
+}
+/* ######################### 520px以上～819px以下（スマートフォン横）######################### */
+@media (min-width: 520px) and (max-width: 819px) {
+	#mysoft ul li {
+		padding: 10px;
+		padding-left: 50px;
+		font-size: 13px;
+	}
+}
+
+/* ######################### 519px以下（スマートフォン縦）######################### */
+@media (max-width: 519px) {
+	#mysoft ul li {
+		padding: 10px;
+		padding-left: 30px;
+		font-size: 14px;
+	}
+}
+/*----------------------　calendar　----------------------*/
+#calendar {
+	display: inline-block;
+}
+/* calendar */
+#calendar table {
+	margin-top: 30px;
+	margin-left: 50px;
+	border: 1px solid #ddd;
+	border-collapse: collapse;
+}
+#calendar th {
+	padding: 15px;
+	text-align: center;
+	background: blanchedalmond;
+}
+#calendar td {
+	padding: 15px;
+	text-align: center;
+	background: ghostwhite;
+}
+#calendar .youbi_0 {
+	color: red;
+}
+#calendar .youbi_6 {
+	color: blue;
+}
+#calendar .today {
+	font-weight: bold;
+	background: orange;
+}
+#calendar .gray {
+	color: #dedede;
+}
+/* ######################### 820px以上～1250px以下 ######################### */
+@media (min-width: 820px) and (max-width: 1250px) {
+	#calendar {
+		display: block;
+		width: 46%;
+		margin: 0;
+	}
+}
+/* ######################### 520px以上～819px以下（スマートフォン横）######################### */
+@media (min-width: 520px) and (max-width: 819px) {
+	#calendar {
+		display: block;
+		width: 46%;
+		margin: 0;
+	}
+	/* calendar */
+	#calendar a {
+		text-decoration: none;
+		color: red;
+	}
+	#calendar table {
+		margin: 0 auto 30px;
+		border: 1px solid #ddd;
+		border-collapse: collapse;
+	}
+	#calendar th {
+		padding: 10px;
+		text-align: center;
+		background: blanchedalmond;
+	}
+	#calendar td {
+		padding: 10px;
+		text-align: center;
+		background: ghostwhite;
+	}
+}
+/* ######################### 519px以下（スマートフォン縦）######################### */
+@media (max-width: 519px) {
+	#calendar {
+		display: block;
+		width: 46%;
+		margin: 0;
+	}
+	#draw_app {
+		display: block;
+		width: 100%;
+		vertical-align: top;
+	}
+	/* calendar */
+	#calendar a {
+		text-decoration: none;
+		color: red;
+	}
+	#calendar table {
+		margin: 0 auto 30px;
+		border: 1px solid #ddd;
+		border-collapse: collapse;
+	}
+	#calendar th {
+		padding: 10px;
+		text-align: center;
+		background: blanchedalmond;
+	}
+	#calendar td {
+		padding: 10px;
+		text-align: center;
+		background: ghostwhite;
+	}
+}
+/*----------------------　contact　----------------------*/
+#contact {
+	height: 780px;
+}
+#contact p {
+	padding-left: 30px;
+	padding-bottom: 10px;
+}
+#contact img {
+	display: inline-block;
+}
+#contact a {
+	display: inline-block;
+	padding: 10px;
+	padding-left: 20px;
+	vertical-align: top;
+}
+/* ######################### 820px以上～1250px以下 ######################### */
+@media (min-width: 820px) and (max-width: 1250px) {
+	#contact {
+		height: 850px;
+	}
+	#contact p {
+		padding-left: 20px;
+		padding-bottom: 10px;
+		font-size: 15px;
+	}
+}
+/* ######################### 520px以上～819px以下（スマートフォン横）######################### */
+@media (min-width: 520px) and (max-width: 819px) {
+	#contact {
+		height: 900px;
+	}
+	#contact p {
+		padding-left: 15px;
+		padding-bottom: 10px;
+		font-size: 13px;
+	}
+}
+/* ######################### 519px以下（スマートフォン縦）######################### */
+@media (max-width: 519px) {
+
+}
+/*----------------------　footer　----------------------*/
+footer {
+	position: fixed;
+	top: 90%;
+	left: 0;
+	width: 16%;
+	color: #fff;
+	font-size: 10px;
+	line-height: 1.8;
+	padding-left: 3%;
+}
+/* ######################### 820px以上～1250px以下 ######################### */
+@media (min-width: 820px) and (max-width: 1250px) {
+
+}
+/* ######################### 520px以上～819px以下（スマートフォン横）######################### */
+@media (min-width: 520px) and (max-width: 819px) {
+	footer {
+		top: 43%;
+		font-size: 8px;
+	}
+}
+/* ######################### 519px以下（スマートフォン縦）######################### */
+@media (max-width: 519px) {
+	
+}

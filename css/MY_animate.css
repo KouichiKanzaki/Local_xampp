@@ -1,0 +1,741 @@
+@charset "utf-8";
+/*----------------------　ロゴタイプアニメーション　----------------------*/
+
+.logo-reset {
+	fill: transparent;
+	stroke: none;
+}
+.logo-type-animation {
+	stroke: #000;
+	stroke-width: .1;
+	stroke-dasharray: 2000;
+	animation: logo_type_descript 4s ease-in 0s;
+}
+ @keyframes logo_type_descript {
+ 0% {
+ stroke-dashoffset: 2000;
+ fill:transparent
+}
+ 50% {
+ fill:transparent;
+}
+ 100% {
+ stroke-dashoffset: 0;
+ fill:#000;
+}
+}
+/*----------------------　トグルロゴバーアニメーション　----------------------*/
+
+.bar-second-inital {
+	stroke-dasharray: 100;
+	stroke-dashoffset: -30;
+}
+.bar-first_third-over {
+	animation: top_bottom-line-animate-over 0.5s linear forwards;
+}
+.bar-second-over {
+	animation: center-line-animate-over 0.5s linear forwards;
+}
+.bar-first_third-out {
+	animation: top_bottom-line-animate-out 0.5s linear forwards;
+}
+.bar-second-out {
+	animation: center-line-animate-out 0.5s linear forwards;
+}
+ @keyframes top_bottom-line-animate-over {
+ 0% {
+ stroke-dasharray:  140 0;
+ stroke-dashoffset: 200;
+}
+ 100% {
+ stroke-dasharray:  0 140;
+ stroke-dashoffset: 0;
+}
+}
+ @keyframes center-line-animate-over {
+ 0% {
+ stroke-dasharray: 100;
+ stroke-dashoffset: -30;
+}
+ 100% {
+ stroke-dashoffset: 0;
+}
+}
+ @keyframes top_bottom-line-animate-out {
+ 0% {
+ stroke-dasharray:  0 1400;
+ stroke-dashoffset: 0;
+}
+ 100% {
+ stroke-dasharray:  140 0;
+ stroke-dashoffset: 200;
+}
+}
+ @keyframes center-line-animate-out {
+ 0% {
+ stroke-dashoffset: 0;
+}
+ 100% {
+ stroke-dasharray: 100;
+ stroke-dashoffset: -30;
+}
+}
+/*----------------------　ナビ文字アニメーション　----------------------*/
+
+.animated_top {
+	animation-duration: .5s;
+	animation-delay: 0;
+	animation-fill-mode: both;
+}
+.animated_hakone {
+	animation-duration: .5s;
+	animation-delay: .1s;
+	animation-fill-mode: both;
+}
+.animated_syukubo {
+	animation-duration: .5s;
+	animation-delay: .2s;
+	animation-fill-mode: both;
+}
+.animated_inquiry {
+	animation-duration: .5s;
+	animation-delay: .3s;
+	animation-fill-mode: both;
+}
+/*----------------------　TOPページ最乗寺BOXアニメーション　----------------------*/
+
+#top-saijyo2 {
+	width: 600px;
+	height: 400px;
+	overflow: hidden;
+}
+#top-saijyo2 p {
+	text-align: center;
+	font-size: 19px;
+	color: #ffffff;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	margin: 180px 20px;
+	border-bottom: 1px solid #ffffff;
+}
+#top-saijyo2 img {
+	transition: transform 0.5s linear;
+}
+#top-saijyo2:hover img {
+	transform: scale(1.1);
+}
+#top-saijyo2 div {
+	position: absolute;
+	display: none;
+	width: 100%;
+	height: 100%;
+	padding: 20px;
+	background: rgba(77, 77, 77, .5);
+	top: 0;
+	left: 0;
+	box-sizing: border-box;
+}
+#top-saijyo3 {
+	width: 600px;
+	height: 400px;
+	overflow: hidden;
+}
+#top-saijyo3 p {
+	text-align: center;
+	font-size: 19px;
+	color: #ffffff;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	margin: 180px 20px;
+	border-bottom: 1px solid #ffffff;
+}
+#top-saijyo3 img {
+	transition: transform 0.5s linear;
+}
+#top-saijyo3:hover img {
+	transform: scale(1.1);
+}
+#top-saijyo3 div {
+	position: absolute;
+	display: none;
+	width: 100%;
+	height: 100%;
+	padding: 20px;
+	background: rgba(77, 77, 77, .7);
+	top: 0;
+	left: 0;
+	box-sizing: border-box;
+}
+#top-saijyo4 {
+	width: 600px;
+	height: 400px;
+	overflow: hidden;
+}
+#top-saijyo4 p {
+	text-align: center;
+	font-size: 19px;
+	color: #ffffff;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	margin: 180px 20px;
+	border-bottom: 1px solid #ffffff;
+}
+#top-saijyo4 img {
+	transition: transform 0.5s linear;
+}
+#top-saijyo4:hover img {
+	transform: scale(1.1);
+}
+#top-saijyo4 div {
+	position: absolute;
+	display: none;
+	width: 100%;
+	height: 100%;
+	padding: 20px;
+	background: rgba(77, 77, 77, .7);
+	top: 0;
+	left: 0;
+	box-sizing: border-box;
+}
+
+/* ######################### 520px以上～819px以下（スマートフォン横）######################### */
+
+@media (min-width: 520px) and (max-width: 819px) {
+#top-saijyo2 p {
+	text-align: center;
+	font-size: 19px;
+	color: #ffffff;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	margin: 160px 30px;
+	border-bottom: 1px solid #ffffff;
+	width: 400px;
+}
+#top-saijyo3 p {
+	text-align: center;
+	font-size: 19px;
+	color: #ffffff;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	margin: 160px 30px;
+	border-bottom: 1px solid #ffffff;
+	width: 400px;
+}
+#top-saijyo4 p {
+	text-align: center;
+	font-size: 19px;
+	color: #ffffff;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	margin: 160px 30px;
+	border-bottom: 1px solid #ffffff;
+	width: 400px;
+}
+}
+
+/* ######################### 519px以下（スマートフォン縦）######################### */
+
+@media (max-width: 519px) {
+#top-saijyo2 {
+	width: 300px;
+	height: 250px;
+	overflow: hidden;
+}
+#top-saijyo3 {
+	width: 300px;
+	height: 250px;
+	overflow: hidden;
+}
+#top-saijyo4 {
+	width: 300px;
+	height: 250px;
+	overflow: hidden;
+}
+#top-saijyo2 p {
+	text-align: center;
+	font-size: 19px;
+	color: #ffffff;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	margin: 100px 20px;
+	border-bottom: 1px solid #ffffff;
+	width: 220px;
+}
+#top-saijyo3 p {
+	text-align: center;
+	font-size: 19px;
+	color: #ffffff;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	margin: 100px 20px;
+	border-bottom: 1px solid #ffffff;
+	width: 220px;
+}
+#top-saijyo4 p {
+	text-align: center;
+	font-size: 19px;
+	color: #ffffff;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	margin: 100px 20px;
+	border-bottom: 1px solid #ffffff;
+	width: 220px;
+}
+}
+/*----------------------　トグルブラックに変更　----------------------*/
+
+.to_black {
+	animation: toggle-to-black 0.5s linear forwards;
+}
+.to_white {
+	animation: toggle-to-white 0.5s linear forwards;
+}
+ @keyframes toggle-to-black {
+ 0% {
+ background-color: #ffffff;
+ fill: #2d2d2d;
+ stroke:#000000;
+}
+ 100% {
+ background-color: #2d2d2d;
+ fill: #ffffff;
+ stroke:#ffffff;
+}
+}
+ @keyframes toggle-to-white {
+ 0% {
+ background-color: #2d2d2d;
+ fill: #ffffff;
+ stroke:#ffffff;
+}
+ 100% {
+background-color: #ffffff;
+ fill: #2d2d2d;
+ stroke:#2d2d2d;
+}
+}
+/*----------------------　TOP文字アニメーション　----------------------*/
+#top-mojis {
+	width: 100%;
+	height: 100%;
+}
+.top-container-reset {
+	display: none;
+}
+#top-mojis div {
+	position: absolute;
+	color: #ffffff;
+	top: 40%;
+	left: 35%;
+	width: 500px;
+	height: 100px;
+	text-align: center;
+	margin: 0 auto;
+}
+#top-container-moji1 p:nth-child(1) {
+	position: relative;
+	font-size: 17px;
+	border-bottom: 1px solid #ffffff;
+	text-align: center;
+	padding: 20px;
+	z-index: 5;
+}
+#top-container-moji1 p:nth-child(2) {
+	position: relative;
+	font-size: 50px;
+	margin-top: 20px;
+	text-align: center;
+	z-index: 5;
+}
+#top-container-moji2 p:nth-child(1) {
+	position: relative;
+	font-size: 17px;
+	border-bottom: 1px solid #ffffff;
+	text-align: center;
+	padding: 20px;
+	z-index: 5;
+}
+#top-container-moji2 p:nth-child(2) {
+	position: relative;
+	font-size: 50px;
+	margin-top: 20px;
+	text-align: center;
+	z-index: 5;
+}
+#top-container-moji3 p:nth-child(1) {
+	position: relative;
+	font-size: 17px;
+	border-bottom: 1px solid #ffffff;
+	text-align: center;
+	padding: 20px;
+	z-index: 5;
+}
+#top-container-moji3 p:nth-child(2) {
+	position: relative;
+	font-size: 50px;
+	margin-top: 20px;
+	text-align: center;
+	z-index: 5;
+}
+#top-container-moji4 p:nth-child(1) {
+	position: relative;
+	font-size: 17px;
+	border-bottom: 1px solid #ffffff;
+	text-align: center;
+	padding: 20px;
+	z-index: 5;
+}
+#top-container-moji4 p:nth-child(2) {
+	position: relative;
+	font-size: 50px;
+	margin-top: 20px;
+	text-align: center;
+	z-index: 5;
+}
+.top-container-top {
+	animation-duration: .5s;
+	animation-delay: 0;
+	animation-fill-mode: both;
+}
+.top-container-bottom {
+	animation-duration: .5s;
+	animation-delay: .3s;
+	animation-fill-mode: both;
+}
+
+/* ######################### 820px以上～1250px以下 ######################### */
+
+@media (min-width: 820px) and (max-width: 1250px) {
+#top-mojis div {
+	position: absolute;
+	color: #ffffff;
+	top: 20%;
+	left: 25%;
+	width: 500px;
+	height: 100px;
+	text-align: center;
+}
+}
+
+/* ######################### 520px以上～819px以下（スマートフォン横）######################### */
+
+@media (min-width: 520px) and (max-width: 819px) {
+#top-mojis div {
+	position: absolute;
+	color: #ffffff;
+	top: 10%;
+	left: 30%;
+	width: 300px;
+	height: 100px;
+	text-align: center;
+}
+#top-container-moji1 p:nth-child(1) {
+	font-size: 14px;
+	border-bottom: 1px solid #ffffff;
+	text-align: center;
+	padding: 10px;
+}
+#top-container-moji1 p:nth-child(2) {
+	font-size: 25px;
+	margin-top: 10px;
+	text-align: center;
+}
+#top-container-moji2 p:nth-child(1) {
+	font-size: 14px;
+	border-bottom: 1px solid #ffffff;
+	text-align: center;
+	padding: 10px;
+}
+#top-container-moji2 p:nth-child(2) {
+	font-size: 25px;
+	margin-top: 10px;
+	text-align: center;
+}
+#top-container-moji3 p:nth-child(1) {
+	font-size: 14px;
+	border-bottom: 1px solid #ffffff;
+	text-align: center;
+	padding: 10px;
+}
+#top-container-moji3 p:nth-child(2) {
+	font-size: 25px;
+	margin-top: 10px;
+	text-align: center;
+}
+#top-container-moji4 p:nth-child(1) {
+	font-size: 14px;
+	border-bottom: 1px solid #ffffff;
+	text-align: center;
+	padding: 10px;
+}
+#top-container-moji4 p:nth-child(2) {
+	font-size: 25px;
+	margin-top: 10px;
+	text-align: center;
+}
+}
+
+/* ######################### 519px以下（スマートフォン縦）######################### */
+
+@media (max-width: 519px) {
+#top-mojis div {
+	position: absolute;
+	color: #ffffff;
+	top: 5%;
+	left: 20%;
+	width: 200px;
+	height: 100px;
+	text-align: center;
+}
+#top-container-moji1 p:nth-child(1) {
+	font-size: 14px;
+	border-bottom: 1px solid #ffffff;
+	text-align: center;
+	padding: 10px;
+}
+#top-container-moji1 p:nth-child(2) {
+	font-size: 20px;
+	margin-top: 10px;
+	text-align: center;
+}
+#top-container-moji2 p:nth-child(1) {
+	font-size: 14px;
+	border-bottom: 1px solid #ffffff;
+	text-align: center;
+	padding: 10px;
+}
+#top-container-moji2 p:nth-child(2) {
+	font-size: 20px;
+	margin-top: 10px;
+	text-align: center;
+}
+#top-container-moji3 p:nth-child(1) {
+	font-size: 14px;
+	border-bottom: 1px solid #ffffff;
+	text-align: center;
+	padding: 10px;
+}
+#top-container-moji3 p:nth-child(2) {
+	font-size: 20px;
+	margin-top: 10px;
+	text-align: center;
+}
+#top-container-moji4 p:nth-child(1) {
+	font-size: 14px;
+	border-bottom: 1px solid #ffffff;
+	text-align: center;
+	padding: 10px;
+}
+#top-container-moji4 p:nth-child(2) {
+	font-size: 20px;
+	margin-top: 10px;
+	text-align: center;
+}
+}
+/*----------------------　スクロールバー折り畳み効果　----------------------*/
+
+.scroll-bar-hidden {
+	transition: .5s;
+	visibility: hidden;
+	transform: perspective(500px) rotateX(90deg);
+	transform-origin: center;
+}
+.scroll-bar-show {
+	transition: transform .5s;
+	visibility: visible;
+	transform: perspective(500px) rotateX(0deg);
+	transform-origin: center;
+}
+/*----------------------　TOP文字図形アニメーション　----------------------*/
+
+.c-svg-style {
+	stroke: #ef454a;
+	stroke-width: 1;
+	stroke-miterlimit: 10;
+	font-family: 'Arial';
+	font-size: 458.8437px
+}
+.g-svg-style {
+	stroke: #ef454a;
+	stroke-width: 1;
+	stroke-miterlimit: 10;
+	font-family: 'ArialMT';
+	font-size: 458.8437px;
+}
+.t-svg-style {
+	stroke: #ef454a;
+	stroke-width: 1;
+	stroke-miterlimit: 10;
+	font-family: 'ArialMT';
+	font-size: 458.8437px;
+}
+.a-svg-style {
+	stroke: #ef454a;
+	stroke-width: 1;
+	stroke-miterlimit: 10;
+	font-family: 'MS-PGothic';
+	font-size: 382.0682px;
+}
+#c-svg {
+	transform: scale(1.0, 1.0);
+	position: absolute;
+	top: -200px;
+	left: 0;
+	z-index: 2;
+	fill: #ef454a;
+}
+#g-svg {
+	transform: scale(1.0, 1.0);
+	position: absolute;
+	top: -268px;
+	left: 32px;
+	z-index: 2;
+	fill: #ef454a;
+}
+#t-svg {
+	transform: scale(1.0, 1.0);
+	position: absolute;
+	top: -200px;
+	left: 0;
+	z-index: 2;
+	fill: #ef454a;
+}
+#a-svg {
+	transform: scale(1.2, 1.2);
+	position: absolute;
+	top: -268px;
+	left: 40px;
+	z-index: 2;
+	fill: #ef454a;
+}
+.top-container-zuke-animation {
+	stroke-dasharray: 5000;
+	stroke-dashoffset: 5000;
+	animation: zukei 3s ease-in forwards 1s;
+}
+ @keyframes zukei {
+ 0% {
+stroke-dashoffset:5000;
+}
+ 100% {
+stroke-dashoffset:0;
+}
+}
+.top-container-zuke-animation2 {
+	stroke-dasharray: 5000;
+	animation: zukei2 4s ease-in 0s;
+}
+ @keyframes zukei2 {
+ 0% {
+ stroke-dashoffset: 5000;
+ fill:transparent;
+}
+ 50% {
+ fill:transparent;
+}
+ 100% {
+ stroke-dashoffset: 0;
+}
+}
+
+/* ######################### 820px以上～1250px以下 ######################### */
+
+@media (min-width: 820px) and (max-width: 1250px) {
+#c-svg {
+	transform: scale(1.0, 1.0);
+	position: absolute;
+	top: -200px;
+	left: 0;
+	z-index: 2;
+	fill: #ef454a;
+}
+#g-svg {
+	transform: scale(1.0, 1.0);
+	position: absolute;
+	top: -268px;
+	left: 32px;
+	z-index: 2;
+	fill: #ef454a;
+}
+#t-svg {
+	transform: scale(1.0, 1.0);
+	position: absolute;
+	top: -200px;
+	left: 0;
+	z-index: 2;
+	fill: #ef454a;
+}
+#a-svg {
+	transform: scale(1.2, 1.2);
+	position: absolute;
+	top: -268px;
+	left: 40px;
+	z-index: 2;
+	fill: #ef454a;
+}
+}
+
+/* ######################### 520px以上～819px以下（スマートフォン横）######################### */
+
+@media (min-width: 520px) and (max-width: 819px) {
+#c-svg {
+	transform: scale(0.9, 0.9);
+	position: absolute;
+	top: -125px;
+	left: 0;
+	z-index: 2;
+	fill: #ef454a;
+}
+#g-svg {
+	transform: scale(0.9, 0.9);
+	position: absolute;
+	top: -155px;
+	left: 18px;
+	z-index: 2;
+	fill: #ef454a;
+}
+#t-svg {
+	transform: scale(0.9, 0.9);
+	position: absolute;
+	top: -120px;
+	left: 0;
+	z-index: 2;
+	fill: #ef454a;
+}
+#a-svg {
+	transform: scale(0.9, 0.9);
+	position: absolute;
+	top: -148px;
+	left: 20px;
+	z-index: 2;
+	fill: #ef454a;
+}
+}
+
+/* ######################### 519px以下（スマートフォン縦）######################### */
+
+@media (max-width: 519px) {
+#c-svg {
+	transform: scale(0.9, 0.9);
+	position: absolute;
+	top: -70px;
+	left: 0;
+	z-index: 2;
+	fill: #ef454a;
+}
+#g-svg {
+	transform: scale(0.9, 0.9);
+	position: absolute;
+	top: -90px;
+	left: 10px;
+	z-index: 2;
+	fill: #ef454a;
+}
+#t-svg {
+	transform: scale(0.9, 0.9);
+	position: absolute;
+	top: -65px;
+	left: 0;
+	z-index: 2;
+	fill: #ef454a;
+}
+#a-svg {
+	transform: scale(0.9, 0.9);
+	position: absolute;
+	top: -80px;
+	left: 17px;
+	z-index: 2;
+	fill: #ef454a;
+}
+}

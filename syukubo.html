@@ -1,0 +1,197 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, minimum-scale=1">
+<meta name="author" content="神﨑幸逸">
+<meta name="keywords" content="circulture, syukubo">
+<meta name="description" content="circulture syukubo">
+
+<!--リセットCSS-->
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+
+<!--スタイルCSS-->
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+<!--自作CSS3アニメーション-->
+<link rel="stylesheet" type="text/css" href="css/MY_animate.css">
+
+<!--animate.cssプラグイン-->
+<link rel="stylesheet" type="text/css" href="css/animate.css">
+
+<!--jquery使用-->
+<script src="JavaScript/jquery-3.0.0.min.js"></script>
+
+<!--ファビコン指定-->
+<link rel="shortcut icon" href="src/common/LOGO.png" type="image/x-icon">
+<title>circulture_syukubo</title>
+</head>
+<body>
+<!------------------------ SVG定義　------------------------>
+<div style="display: none">
+  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+    <symbol id="symbol-logotype" viewBox="0 0 60.3 55.1" x="0px" y="0px">
+      <circle cx="53.7" cy="27.6" r="6.7"/>
+      <path d="M0,48.2l0-4.7C2.1,46,4.8,48,8.1,49.6c3.3,1.6,6.6,2.3,9.9,2.3c3.3,0,6.4-0.7,9.4-2c3-1.3,5.6-3.1,7.8-5.4
+			c2.3-2.3,4-5,5.3-8c1.3-3,1.9-6.1,1.9-9.3c0-3.1-0.6-6.1-1.9-9c-1.3-2.9-3-5.4-5.3-7.6c-2.3-2.2-5-4-8.1-5.4c-3-1.4-6.1-2-9.2-2
+			c-2.1,0-4.3,0.4-6.6,1.1C9.2,5,7,5.9,5,7.2c-2,1.3-3.7,2.7-5,4.2l0-4.7C5.4,2.2,11.3,0,17.9,0c4.9,0,9.5,1.2,13.8,3.7
+			C36,6.2,39.4,9.6,42,13.8c2.6,4.2,3.9,8.8,3.9,13.7c0,5-1.3,9.6-3.8,13.8c-2.5,4.2-6,7.6-10.3,10.1c-4.3,2.5-9,3.7-14,3.7
+			c-2.2,0-4.3-0.3-6.4-0.8C9.3,53.8,7.3,53,5.3,52C3.4,50.9,1.6,49.6,0,48.2z"/>
+      <path d="M60.3,13.6v3.2c-1.4-1.7-3.2-3.1-5.5-4.2c-2.3-1.1-4.5-1.6-6.8-1.6c-2.2,0-4.4,0.4-6.4,1.3
+			c-2,0.9-3.8,2.1-5.3,3.7c-1.5,1.6-2.7,3.4-3.6,5.4c-0.9,2-1.3,4.2-1.3,6.3c0,2.1,0.4,4.1,1.3,6.1c0.9,2,2.1,3.7,3.6,5.2
+			c1.6,1.5,3.4,2.7,5.5,3.6c2.1,0.9,4.1,1.4,6.2,1.4c1.4,0,2.9-0.2,4.5-0.7c1.6-0.5,3-1.1,4.4-2c1.4-0.9,2.5-1.8,3.4-2.9v3.2
+			c-3.7,3-7.7,4.6-12.2,4.6c-3.3,0-6.5-0.8-9.4-2.5c-2.9-1.7-5.3-4-7-6.9c-1.8-2.9-2.6-6-2.6-9.3c0-3.4,0.9-6.5,2.6-9.4
+			c1.7-2.9,4.1-5.2,7-6.9c2.9-1.7,6.1-2.5,9.5-2.5c1.5,0,2.9,0.2,4.4,0.6c1.4,0.4,2.8,0.9,4.1,1.6C58,11.7,59.2,12.6,60.3,13.6z"/>
+    </symbol>
+    <symbol id="symbol-syukubo-nav-close-under" viewBox="0 0 52.1 52.1" x="0px" y="0px">
+      <line x1="1.1" y1="1.1" x2="51.1" y2="51.1"/>
+      <line x1="1.1" y1="51.1" x2="51.1" y2="1.1"/>
+    </symbol>
+  </svg>
+</div>
+<!------------------------　共通　------------------------>
+<noscript>
+javascriptを有効にしてください。
+</noscript>
+<div class="navbar-toggle">
+  <svg id="navbar-toggle-logo" class="logo">
+    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#symbol-logotype"/>
+  </svg>
+  <svg id="logo-bar" viewBox="0 0 60.3 31" x="0px" y="0px">
+    <line x1="20" y1="27" x2="60.3" y2="27"/>
+    <line class="bar-second-inital" x1="-10" y1="15.5" x2="60.3" y2="15.5"/>
+    <line x1="20" y1="3" x2="60.3" y2="3"/>
+  </svg>
+  <div id="toggle-hover-area"></div>
+</div>
+<nav>
+  <div class="nav">
+    <div id="syukubo-nav-close">
+      <svg id="syukubo-nav-close-up" class="logo">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#symbol-logotype"/>
+      </svg>
+      <svg id="syukubo-nav-close-under">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#symbol-syukubo-nav-close-under"/>
+      </svg>
+    </div>
+    <ul>
+      <li class="animated_top fadeInUp"><a href="home.html">Home</a></li>
+      <li class="animated_hakone fadeInUp"><a href="gesthouse.html">Hakone tent</a></li>
+      <li class="animated_syukubo fadeInUp"><a href="syukubo.html">Syukubo</a></li>
+      <hr>
+      <li class="animated_inquiry fadeInUp"><a href="inquiry.html">Inquiry</a></li>
+    </ul>
+  </div>
+</nav>
+<div id="nav-back"> </div>
+<!------------------------　宿坊についてページ　------------------------>
+<header> <a href="https://ja-jp.facebook.com/" target="_blank">
+  <svg id="facebook-icon">
+    <path id="facebook1" d="M102.9,98.4c0,2.5-1.8,4.5-4.4,4.5h-93c-2.6,0-5-2-5-4.5V5c0-2.5,2.4-4.5,5-4.5h93c2.6,0,4.4,2,4.4,4.5V98.4z"/>
+    <path id="facebook2" d="M59.1,31.3h8.6V18.1H55.2c-8.4,0-13.8,5.9-13.8,12.3v8.6h-7.7v13.2h7.7v34h15.4v-34h9.4L67,38.9H56.8v-5.7
+	C56.8,31.5,57.5,31.3,59.1,31.3z"/>
+  </svg>
+  </a> <a href="https://twitter.com/" target="_blank">
+  <svg id="twitter-icon">
+    <path id="twitter1" d="M102.9,98.6c0,2.5-1.6,4.3-4.2,4.3h-93c-2.6,0-5.2-1.8-5.2-4.3V5.2c0-2.5,2.6-4.7,5.2-4.7h93
+	c2.6,0,4.2,2.2,4.2,4.7V98.6z"/>
+    <path id="twitter2" d="M87.4,29.5c0,0-2.8,1.6-7.7,2.1c5-3.5,5.9-8.3,5.9-8.3s-3.2,2.6-9,3.6c-2.8-2.9-6.6-4.7-11-4.7
+	c-8.4,0-15.1,6.8-15.1,15.1c0,1.2,0.1,2.3,0.4,3.4c-13.5-1.5-22.6-6.5-30.6-15.4c0,0-6,11.1,4.8,19.7c-2.3-0.5-4.7-1.2-7-2
+	c0,0,0,11.4,11.7,14.6c-2,0.3-3.8,0.4-6.1,0c0,0,3,10,13.9,10.6c-7,4.6-13.4,6.7-21.5,6.1c0,0,9.2,6.9,23.2,6.6
+	c6.4-0.1,14.7-1.2,22-6.1c16.6-11.1,19.1-29.4,19.4-36.9c0-0.3,0-0.6,0-0.9c0-0.2,0-0.5,0-0.7C85.8,33.9,87.4,29.5,87.4,29.5z"/>
+  </svg>
+  </a> <a href="https://plus.google.com/" target="_blank">
+  <svg id="google-plus-icon">
+    <path id="google-plus1" d="M102.9,98.2c0,2.5-1.3,4.7-3.9,4.7H6c-2.6,0-5.5-2.2-5.5-4.7V4.8c0-2.5,2.9-4.3,5.5-4.3h93
+	c2.6,0,3.9,1.8,3.9,4.3V98.2z"/>
+    <path id="google-plus2" d="M58.3,20.4h-6c0,0,7.5,3.9,6.5,13.7c-0.5,4.3-2.3,6.4-4.3,8.7c-2.9,3.2-5,2.8-6,6c-0.8,2.8,1.3,4,4.2,6.2
+	c2.7,2.1,5.7,4.5,7.4,7.2c3.2,5.2,2.9,13.3-3.7,18.8c-9.3,7.8-22.5,6.6-28.3,5c-10.8-3-14.4-12.4-8.4-20.1
+	c6.4-8.2,22.6-8.4,22.6-8.4c-4.9-4.1-2.2-9.5-2.2-9.5C29.4,49.1,22,44.1,21.8,34.1C21.6,22.6,30.9,17,42.3,17C53.7,17,64,17,64,17
+	L58.3,20.4z M36,19.9c-5.8,1.8-7.1,9.3-4.9,16.1c2.1,6.9,7.4,11,13.6,8.9c5.7-2,6.7-8.2,4.6-15.1C47.2,22.9,41.8,18.1,36,19.9z
+	 M45.6,60.7c-9.1-0.4-19.1,1.9-20.3,9.4c-1.2,7.4,5.5,12.2,14.1,12.9c8.3,0.7,15.4-2.2,16.4-9C56.7,67.8,50.1,63.9,45.6,60.7z
+	 M86.5,45.7h-9.6v-9.6h-4.8v9.6h-9.6v4.8h9.6v9.6h4.8v-9.6h9.6V45.7z"/>
+  </svg>
+  </a>
+  <h1 class="page-title"><span>&nbsp;&nbsp;&nbsp;Syukubo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></h1>
+  <div class="header-link"> <a href="gesthouse.html">
+    <div class="header-link-left">Hakone tent</div>
+    </a><a href="inquiry.html">
+    <div class="header-link-right">Inquiry</div>
+    </a></div>
+</header>
+<div id="syukubo-yohaku">
+  <div id="syukubo-main1"> <img  src="src/about-syukubo/syukubo_top.jpg" alt="宿坊メイン写真1"> </div>
+  <div id="syukubo-main2">
+    <h1>宿坊とは、お寺・神社の宿泊施設です。</h1>
+    <p>本来は、僧侶のみが宿泊する場所、もしくは参拝者の心身を清めるための施設でしたが、現在では一般観光客などの宿泊も受け入れる施設が増え、<br>
+      設備やサービスの充実、寺社文化の体験ができるなど、時代とともに神社・お寺に泊まる旅は広がりをみせています。<br>
+      基本的に宗教施設ですが、最近では、観光ニーズの高まりに対応した観光客に開かれた施設も登場しています。
+      旅館のような上質なサービス、精進料理、勤行や坐禅、写経、法話などの
+      寺社ならではの体験をお楽しみください。</p>
+    <h1>宿坊の形態</h1>
+    <h3>宗旨などの違い</h3>
+    <ul>
+      <li>神社の宿坊</li>
+      <li>寺院の宿坊</li>
+    </ul>
+    <h3>施設の違い</h3>
+    <ul>
+      <li>お寺・神社の建物そのもの（多くの場合は、木造）</li>
+      <li>敷地内にある別の建物（比較的新しく鉄筋で、会館の名前がついていることが多い）</li>
+      <li>少し離れた場所でお寺・神社が運営している施設</li>
+    </ul>
+    <h3>期間の違い</h3>
+    <ul>
+      <li>常時受け入れ</li>
+      <li>期間や季節を限定して受け入れ</li>
+      <li>不定期で受け入れ</li>
+    </ul>
+    <div id="geo"></div>
+    <p id="syukubo-exprience">宿 坊 体 験</p>
+  </div>
+  <!--#################　宿坊体験紹介　#################-->
+  
+  <div id="syukubo-box-all">
+    <div class="syukubo-box-wrap wow fadeInUp" data-wow-duration="1s" data-wow-offset="300">
+      <div class="syukubo-box" id="za-moji">
+        <h1>座禅</h1>
+        <p>仏教で姿勢を正して坐った状態で精神統一を行う、禅の基本的な修行法のことをいいます。
+          しかし、仏教寺院であればどこでも坐禅をしているわけではありません。<br>
+          坐禅を行うことで「集中力が高まる」、「リラックスできる」、「姿勢が美しくなる」、「血圧が安定する」など、健康面や精神面でも良い効果がもたらされると近年人気の高まりを見せる「坐禅」は、今や宗教上の修行の域を超えて、人々の生活に浸透した新たな文化となりつつあります。</p>
+      </div>
+      <div class="syukubo-box zazen-img"><img src="src/about-syukubo/SYU_zazen.jpg" alt="座禅"></div>
+    </div>
+    <div class="syukubo-box-wrap wow fadeInUp" data-wow-duration="1s" data-wow-offset="300">
+      <div class="syukubo-box syakei-img"><img src="src/about-syukubo/SYU_syakei.png" alt="写経"></div>
+      <div class="syukubo-box" id="sya-moji">
+        <h1>写経</h1>
+        <p>仏様の教えであるお経を書き写すこと。その起源は７世紀と言われ、印刷技術が発達いない当時に仏法を広めるための重要な任務として、国をあげて取り組まれてきました。<br>
+          修行の一環として行われてきた写経ですが、最近では脳の活性化され、認知症予防などにも効果があると医学的にも証明され、実は心とからだにいいこと尽くめだということがわかっています。</p>
+      </div>
+    </div>
+    <div class="syukubo-box-wrap wow fadeInUp" data-wow-duration="1s" data-wow-offset="300">
+      <div class="syukubo-box" id="syo-moji">
+        <h1>精進料理</h1>
+        <p>肉や魚を使わずに、野菜や果物や海草などを用いてつくられた料理のことをいい、もとは、厳しい修行を行う僧たちのための食事でした。仏教では、「料理を作る」ことも、「食べる」ことも大切な修行のひとつとされていて、「精進」とは、勤めに励む、修行に専念するという意味です。<br>
+          最近では“食”そのものへの考え方から注目を集め、生活習慣病の予防やダイエットの観点からも多方面で取り入れられています。</p>
+      </div>
+      <div class="syukubo-box syojin-img"><img src="src/about-syukubo/SYU_syoujin.png" alt="精進料理"></div>
+    </div>
+    <div class="syukubo-box-wrap wow fadeInUp" data-wow-duration="1s" data-wow-offset="300">
+      <div class="syukubo-box howa-img"><img src="src/about-syukubo/howa.jpg" alt="法話"></div>
+      <div class="syukubo-box" id="ho-moji">
+        <h1>法話</h1>
+        <p>説教や説法とも言われます。住職や僧侶が仏様の教えについて話をすることを言います。<br>
+          法話は、言わば、今を生きる人に向けて説かれた、良い人生を送るためのメッセージ。人生には辛いこともたくさんあるからこそ、その問題解決へヒントが示されているんです。ストレス過多で忙しい毎日を送る現代人が、まさに必要としているものなのではないでしょうか。</p>
+      </div>
+    </div>
+  </div>
+</div>
+<footer id="syukubo-footer"> <small>All Rights Reserved, Copyright &copy cirCulture</small> </footer>
+<script src="JavaScript/geometryangle.min.js"></script> <!--geometryangleプラグイン--> 
+<script src="JavaScript/prefixfree.min.js"></script> <!--自動ベンダープレフィックス付与プラグイン--> 
+<script src="JavaScript/wow.min.js"></script> <!--animate.cssのタイミングプラグイン--> 
+<script src="JavaScript/common.js"></script> <!--自作JavaScriptファイル--> 
+<script src="JavaScript/syukubo.js"></script> <!--自作JavaScriptファイル-->
+</body>
+</html>

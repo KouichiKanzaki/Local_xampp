@@ -1,0 +1,262 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, minimum-scale=1">
+<meta name="author" content="神﨑幸逸">
+<meta name="keywords" content="circulture, ゲストハウス, Hakonetent, gesthouse">
+<meta name="description" content="circulture ゲストハウス">
+
+<!--リセットCSS-->
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+
+<!--スタイルCSS-->
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+<!--自作CSS3アニメーション-->
+<link rel="stylesheet" type="text/css" href="css/MY_animate.css">
+
+<!--animate.cssプラグイン-->
+<link rel="stylesheet" type="text/css" href="css/animate.css">
+
+<!--jquery使用-->
+<script src="JavaScript/jquery-3.0.0.min.js"></script>
+
+<!--ファビコン指定-->
+<link rel="shortcut icon" href="src/common/LOGO.png" type="image/x-icon">
+<title>circulture_Hakone tent</title>
+</head>
+<body>
+<!------------------------ SVG定義　------------------------>
+<div style="display: none">
+  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+    <symbol id="symbol-logotype" viewBox="0 0 60.3 55.1" x="0px" y="0px">
+      <circle cx="53.7" cy="27.6" r="6.7"/>
+      <path d="M0,48.2l0-4.7C2.1,46,4.8,48,8.1,49.6c3.3,1.6,6.6,2.3,9.9,2.3c3.3,0,6.4-0.7,9.4-2c3-1.3,5.6-3.1,7.8-5.4
+			c2.3-2.3,4-5,5.3-8c1.3-3,1.9-6.1,1.9-9.3c0-3.1-0.6-6.1-1.9-9c-1.3-2.9-3-5.4-5.3-7.6c-2.3-2.2-5-4-8.1-5.4c-3-1.4-6.1-2-9.2-2
+			c-2.1,0-4.3,0.4-6.6,1.1C9.2,5,7,5.9,5,7.2c-2,1.3-3.7,2.7-5,4.2l0-4.7C5.4,2.2,11.3,0,17.9,0c4.9,0,9.5,1.2,13.8,3.7
+			C36,6.2,39.4,9.6,42,13.8c2.6,4.2,3.9,8.8,3.9,13.7c0,5-1.3,9.6-3.8,13.8c-2.5,4.2-6,7.6-10.3,10.1c-4.3,2.5-9,3.7-14,3.7
+			c-2.2,0-4.3-0.3-6.4-0.8C9.3,53.8,7.3,53,5.3,52C3.4,50.9,1.6,49.6,0,48.2z"/>
+      <path d="M60.3,13.6v3.2c-1.4-1.7-3.2-3.1-5.5-4.2c-2.3-1.1-4.5-1.6-6.8-1.6c-2.2,0-4.4,0.4-6.4,1.3
+			c-2,0.9-3.8,2.1-5.3,3.7c-1.5,1.6-2.7,3.4-3.6,5.4c-0.9,2-1.3,4.2-1.3,6.3c0,2.1,0.4,4.1,1.3,6.1c0.9,2,2.1,3.7,3.6,5.2
+			c1.6,1.5,3.4,2.7,5.5,3.6c2.1,0.9,4.1,1.4,6.2,1.4c1.4,0,2.9-0.2,4.5-0.7c1.6-0.5,3-1.1,4.4-2c1.4-0.9,2.5-1.8,3.4-2.9v3.2
+			c-3.7,3-7.7,4.6-12.2,4.6c-3.3,0-6.5-0.8-9.4-2.5c-2.9-1.7-5.3-4-7-6.9c-1.8-2.9-2.6-6-2.6-9.3c0-3.4,0.9-6.5,2.6-9.4
+			c1.7-2.9,4.1-5.2,7-6.9c2.9-1.7,6.1-2.5,9.5-2.5c1.5,0,2.9,0.2,4.4,0.6c1.4,0.4,2.8,0.9,4.1,1.6C58,11.7,59.2,12.6,60.3,13.6z"/>
+    </symbol>
+    <symbol id="symbol-gesthouse-nav-close-under" viewBox="0 0 52.1 52.1" x="0px" y="0px">
+      <line x1="1.1" y1="1.1" x2="51.1" y2="51.1"/>
+      <line x1="1.1" y1="51.1" x2="51.1" y2="1.1"/>
+    </symbol>
+  </svg>
+</div>
+<!------------------------　共通　------------------------>
+<noscript>
+javascriptを有効にしてください。
+</noscript>
+<div class="navbar-toggle">
+  <svg id="navbar-toggle-logo" class="logo">
+    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#symbol-logotype"/>
+  </svg>
+  <svg id="logo-bar" viewBox="0 0 60.3 31" x="0px" y="0px">
+    <line x1="20" y1="27" x2="60.3" y2="27"/>
+    <line class="bar-second-inital" x1="-10" y1="15.5" x2="60.3" y2="15.5"/>
+    <line x1="20" y1="3" x2="60.3" y2="3"/>
+  </svg>
+  <div id="toggle-hover-area"></div>
+</div>
+<nav>
+  <div class="nav">
+    <div id="gesthouse-nav-close">
+      <svg id="gesthouse-nav-close-up" class="logo">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#symbol-logotype"/>
+      </svg>
+      <svg id="gesthouse-nav-close-under">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#symbol-gesthouse-nav-close-under"/>
+      </svg>
+    </div>
+    <ul>
+      <li class="animated_top fadeInUp"><a href="home.html">Home</a></li>
+      <li class="animated_hakone fadeInUp"><a href="gesthouse.html">Hakone tent</a></li>
+      <hr>
+      <li class="animated_syukubo fadeInUp"><a href="syukubo.html">Syukubo</a></li>
+      <li class="animated_inquiry fadeInUp"><a href="inquiry.html">Inquiry</a></li>
+    </ul>
+  </div>
+</nav>
+<div id="nav-back"> </div>
+<!------------------------　ゲストハウスページ　------------------------>
+<header> <a href="https://ja-jp.facebook.com/" target="_blank">
+  <svg id="facebook-icon">
+    <path id="facebook1" d="M102.9,98.4c0,2.5-1.8,4.5-4.4,4.5h-93c-2.6,0-5-2-5-4.5V5c0-2.5,2.4-4.5,5-4.5h93c2.6,0,4.4,2,4.4,4.5V98.4z"/>
+    <path id="facebook2" d="M59.1,31.3h8.6V18.1H55.2c-8.4,0-13.8,5.9-13.8,12.3v8.6h-7.7v13.2h7.7v34h15.4v-34h9.4L67,38.9H56.8v-5.7
+	C56.8,31.5,57.5,31.3,59.1,31.3z"/>
+  </svg>
+  </a> <a href="https://twitter.com/" target="_blank">
+  <svg id="twitter-icon">
+    <path id="twitter1" d="M102.9,98.6c0,2.5-1.6,4.3-4.2,4.3h-93c-2.6,0-5.2-1.8-5.2-4.3V5.2c0-2.5,2.6-4.7,5.2-4.7h93
+	c2.6,0,4.2,2.2,4.2,4.7V98.6z"/>
+    <path id="twitter2" d="M87.4,29.5c0,0-2.8,1.6-7.7,2.1c5-3.5,5.9-8.3,5.9-8.3s-3.2,2.6-9,3.6c-2.8-2.9-6.6-4.7-11-4.7
+	c-8.4,0-15.1,6.8-15.1,15.1c0,1.2,0.1,2.3,0.4,3.4c-13.5-1.5-22.6-6.5-30.6-15.4c0,0-6,11.1,4.8,19.7c-2.3-0.5-4.7-1.2-7-2
+	c0,0,0,11.4,11.7,14.6c-2,0.3-3.8,0.4-6.1,0c0,0,3,10,13.9,10.6c-7,4.6-13.4,6.7-21.5,6.1c0,0,9.2,6.9,23.2,6.6
+	c6.4-0.1,14.7-1.2,22-6.1c16.6-11.1,19.1-29.4,19.4-36.9c0-0.3,0-0.6,0-0.9c0-0.2,0-0.5,0-0.7C85.8,33.9,87.4,29.5,87.4,29.5z"/>
+  </svg>
+  </a> <a href="https://plus.google.com/" target="_blank">
+  <svg id="google-plus-icon">
+    <path id="google-plus1" d="M102.9,98.2c0,2.5-1.3,4.7-3.9,4.7H6c-2.6,0-5.5-2.2-5.5-4.7V4.8c0-2.5,2.9-4.3,5.5-4.3h93
+	c2.6,0,3.9,1.8,3.9,4.3V98.2z"/>
+    <path id="google-plus2" d="M58.3,20.4h-6c0,0,7.5,3.9,6.5,13.7c-0.5,4.3-2.3,6.4-4.3,8.7c-2.9,3.2-5,2.8-6,6c-0.8,2.8,1.3,4,4.2,6.2
+	c2.7,2.1,5.7,4.5,7.4,7.2c3.2,5.2,2.9,13.3-3.7,18.8c-9.3,7.8-22.5,6.6-28.3,5c-10.8-3-14.4-12.4-8.4-20.1
+	c6.4-8.2,22.6-8.4,22.6-8.4c-4.9-4.1-2.2-9.5-2.2-9.5C29.4,49.1,22,44.1,21.8,34.1C21.6,22.6,30.9,17,42.3,17C53.7,17,64,17,64,17
+	L58.3,20.4z M36,19.9c-5.8,1.8-7.1,9.3-4.9,16.1c2.1,6.9,7.4,11,13.6,8.9c5.7-2,6.7-8.2,4.6-15.1C47.2,22.9,41.8,18.1,36,19.9z
+	 M45.6,60.7c-9.1-0.4-19.1,1.9-20.3,9.4c-1.2,7.4,5.5,12.2,14.1,12.9c8.3,0.7,15.4-2.2,16.4-9C56.7,67.8,50.1,63.9,45.6,60.7z
+	 M86.5,45.7h-9.6v-9.6h-4.8v9.6h-9.6v4.8h9.6v9.6h4.8v-9.6h9.6V45.7z"/>
+  </svg>
+  </a>
+  <h1 class="page-title" id="hako-title"><span>&nbsp;&nbsp;HAKONE TENT</span></h1>
+  <div class="header-link"> <a href="syukubo.html">
+    <div class="header-link-left">Syukubo</div>
+    </a> <a href="inquiry.html">
+    <div class="header-link-right">Inquiry</div>
+    </a> </div>
+</header>
+<div class="gesthouse-yohaku">
+  <div id="gesthouse-main1" class="wow fadeInUp" data-wow-duration="1s"><img src="src/HAKONE-TENT/HA_genkan.png" alt="ゲストハウスメイン写真"></div>
+</div>
+<div class="gesthouse-yohaku-haku">
+  <div id="gesthouse-main2-1">
+    <p>HAKONE TENTは強羅駅から徒歩2分の古旅館を改装し、<br>
+      オープンした温泉付きゲストハウス
+      HAKONE TENTの自慢は24時間源泉掛け流しの温泉です。<br>
+      温泉でポカポカになった後、併設のBarでお酒を楽しんで、ふかふかの和布団でお休み下さい。<br>
+      箱根の山にあるみんなのテント、HAKONE TENT。<br>
+      テントのようにみんなが安心できてドキドキできる場所になりますように。 </p>
+  </div>
+  <div id="gesthouse-box-area1">
+    <div class="spring-img gesthouse-box gesthouse-page-block2 wow fadeInUp" data-wow-duration="1s" data-wow-offset="300" id="spring-animoji">
+      <ul>
+        <li><img src="src/HAKONE-TENT/HA_furo.png" alt="ひのき風呂"></li>
+        <li><img src="src/HAKONE-TENT/HA_furo2.jpg" alt="石風呂1"></li>
+        <li><img src="src/HAKONE-TENT/HA_furo3.jpg" alt="石風呂2"></li>
+      </ul>
+    </div>
+    <div id="gesthouse-page-block1" class="wow fadeInUp" data-wow-duration="1s" data-wow-offset="300">
+      <div class="gesthouse-box" id="spring-kono"> <img id="gesthouse-nihon-dennto" src="src/HAKONE-TENT/gesthouse_haikei1.jpg" alt="日本伝統">
+        <h1>源泉掛け流しの天然温泉</h1>
+        <p>当宿では白濁の硫酸塩泉を源泉掛け流しでお楽しみ頂けます。<br>
+          内湯は２つ、石風呂とヒノキ風呂を24時間ご入浴頂けます。</p>
+        <h4>効能</h4>
+        <div class="kono">
+          <ul>
+            <li>冷え性</li>
+            <li>神経痛</li>
+            <li>慢性皮膚病</li>
+            <li>関節痛</li>
+            <li>五十肩</li>
+          </ul>
+        </div>
+        <div class="kono">
+          <ul>
+            <li>慢性消化器病</li>
+            <li>きりきず</li>
+            <li>やけど</li>
+            <li>動脈硬化症</li>
+          </ul>
+        </div>
+      </div>
+      <div class="gesthouse-box kyakusitu-img"><img src="src/HAKONE-TENT/HA_heya.png" alt="部屋"> </div>
+    </div>
+    <div id="gesthouse-page-block3" class="wow fadeInUp" data-wow-duration="1s" data-wow-offset="300">
+      <div class="gesthouse-box" id="kyakusitu">
+        <p>客室はテントと呼ばれ1〜3名様までの個室<br>
+          男女別のドミトリーをご用意しております。<br>
+          和室ではふかふかの和布団でおくつろぎください。</p>
+        <dl>
+          <dt>1人用個室 (ベッド)</dt>
+          <dd>1人用個室です。ベッドタイプとなっております。</dd>
+          <dd>￥4,000 / 1泊1名様</dd>
+          <dt>2人用個室 (和室またはベッド)</dt>
+          <dd>2人用個室です。和室またはダブルベッドタイプとなります。</dd>
+          <dd>￥9,000 / 1泊1部屋</dd>
+          <dt>3人用個室 (和室)</dt>
+          <dd>3人用個室です。和室、ふかふかのお布団をご用意しております。</dd>
+          <dd>￥13,500 / 1泊1部屋</dd>
+        </dl>
+      </div>
+      <div class="gesthouse-box"><img src="src/HAKONE-TENT/HAKONE-TENT_map.png" alt="HAKONE-TENT地図"> </div>
+    </div>
+  </div>
+  <!--#################　HAKONE TENT BRA紹介　#################-->
+  <div id="gesthouse-main2-2">
+    <h1>HAKONE TENT BAR</h1>
+    <p>ディナータイムからは当ゲストハウス自慢の”HAKONE TENT BAR”にてお食事とお酒をお楽しみいただけます。<br>
+      バーのみのご利用も可能ですので、お気軽にお越しください。<br>
+      営業時間 17：00 ～ 24：00 (L.O. フード 22：00 / ドリンク 23：00)</p>
+  </div>
+</div>
+<div class="gesthouse-yohaku">
+  <div class="gesthouse-eat-box-wrap">
+    <div id="gesthouse-kara"> </div>
+    <div class="gesthouse-eat-box wow fadeInUp" data-wow-duration="1s" data-wow-offset="300" id="gesthouse-box1"> <img src="src/HAKONE-TENT/HA_bar.jpg" alt="バー"> </div>
+  </div>
+  <div class="gesthouse-eat-box-wrap wow fadeInUp" data-wow-duration="1s" data-wow-offset="300">
+    <div class="gesthouse-eat-box gesthouse-box2 drink-img"> <img src="src/HAKONE-TENT/HA_drink.jpg" alt="酒"> </div>
+    <div class="gesthouse-eat-box" id="gesthouse-box3"> <img id="gesthouse-nihon-dennto2" src="src/HAKONE-TENT/gesthouse_haikei2.jpg" alt="日本伝統2">
+      <h1>DRINK</h1>
+      <dl id="gesthouse-drink1">
+        <dt>DRAFT BEER</dt>
+        <dd>アサヒスーパードライ<span>・・・</span>￥500</dd>
+        <dd>ヱビスビール<span>・・・・・・・</span>￥500</dd>
+        <dt>ウィスキ</dt>
+        <dd>白州<span>・・・・・・・・・・・</span>￥700</dd>
+        <dd>竹鶴<span>・・・・・・・・・・・</span>￥600</dd>
+        <dt>カクテル</dt>
+        <dd>カシスオレンジ<span>・・・・・・</span>￥500</dd>
+        <dd>カシスウーロン<span>・・・・・・</span>￥500</dd>
+        <dd>カシスソーダ<span>・・・・・・・</span>￥500</dd>
+      </dl>
+      <dl id="gesthouse-drink2">
+        <dt>日本酒</dt>
+        <dd>箱根山<span>・・・・・・・・・・</span>￥500</dd>
+        <dd>上善如水<span>・・・・・・・・・</span>￥600</dd>
+        <dt>ソフトドリンク</dt>
+        <dd>烏龍茶<span>・・・・・・・・・・</span>￥200</dd>
+        <dd>オレンジジュース<span>・・・・・</span>￥200</dd>
+        <dd>グレープフルーツジュース<span>・</span>￥200</dd>
+        <dd>コーラ<span>・・・・・・・・・・</span>￥200</dd>
+      </dl>
+    </div>
+  </div>
+  <div class="gesthouse-eat-box-wrap wow fadeInUp" data-wow-duration="1s" data-wow-offset="300">
+    <div class="gesthouse-eat-box" id="gesthouse-box4">
+      <h1>FOOD</h1>
+      <div class="gesthouse-food">
+        <ul>
+          <li>ミックスナッツ<span>・・・</span>￥300</li>
+          <li>チーズ盛り合わせ<span>・・</span>￥500</li>
+          <li>生ハムのオリーブ添え<span></span>￥500</li>
+          <li>肉じゃが<span>・・・・・・</span>￥500</li>
+          <li>カレーライス<span>・・・・</span>￥500</li>
+          <li>日替わりピザ<span>・・・・</span>￥800～</li>
+        </ul>
+      </div>
+      <div class="gesthouse-food">
+        <ul>
+          <li>茶豆<span>・・・・・・・・</span>￥300</li>
+          <li>アンチョビトースト<span>・</span>￥300</li>
+          <li>シーザーサラダ<span>・・・</span>￥500</li>
+          <li>ナスのラザニア<span>・・・</span>￥600</li>
+          <li>ご飯と味噌汁<span>・・・・</span>￥300</li>
+          <li>日替わりパスタ<span>・・・</span>￥800～</li>
+        </ul>
+      </div>
+    </div>
+    <div class="gesthouse-eat-box gesthouse-box5"> <img src="src/HAKONE-TENT/HA_food2.jpg" alt="food1"> </div>
+  </div>
+</div>
+<footer id="gesthouse-footer"> <small>All Rights Reserved, Copyright &copy cirCulture</small> </footer>
+<script src="JavaScript/prefixfree.min.js"></script> <!--自動ベンダープレフィックス付与プラグイン--> 
+<script src="JavaScript/wow.min.js"></script> <!--animate.cssのタイミングプラグイン--> 
+<script src="JavaScript/common.js"></script> <!--自作JavaScriptファイル--> 
+<script src="JavaScript/gesthouse.js"></script> <!--自作JavaScriptファイル-->
+</body>
+</html>

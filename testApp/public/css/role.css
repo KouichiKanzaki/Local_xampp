@@ -1,0 +1,47 @@
+/*タブ*/
+.tab-group{
+    display: flex;
+    justify-content: center;
+}
+
+.tab{
+    flex-grow: 1;
+    padding:5px;
+    list-style:none;
+    border:solid 1px #CCC;
+    text-align:center;
+    cursor:pointer;
+}
+.panel-group{
+    height:100px;
+    border:solid 1px #CCC;
+    border-top:none;
+    background:#eee;
+    height: 400px;
+}
+.panel-group2{
+    height:100px;
+    border:solid 1px #CCC;
+    border-top:none;
+    background:gray;
+    height: 300px;
+}
+.oya_tab{{
+
+}
+.panel{
+    display:none;
+}
+/*メイン*/
+.search{
+    border: 1px solid;
+    height: 400px;
+    padding: 10px;
+    margin: 20px;
+}
+.contents{
+    border: 1px solid;
+    height: 300px;
+    padding: 10px;
+    margin: 20px;
+}

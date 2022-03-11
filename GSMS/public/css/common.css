@@ -1,0 +1,11 @@
+html {
+    background: linear-gradient(to bottom, tomato, lightsalmon);
+    height: auto;
+    min-height: 100%;
+}
+h2{
+    font-size: 24px;
+    padding: 50px;
+    padding-bottom: 20px;
+    color: #fff;
+}
